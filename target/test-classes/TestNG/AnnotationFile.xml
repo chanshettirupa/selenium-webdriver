@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+<!-- Create a class and give @AfterTest annotation to execute these test case first-->
+
+<suite name="Suite">
+	
+	  <!-- @BeforeTest-->
+	  <test thread-count="5" name="Test">
+	    <classes>
+	      <class name="TestNG.FirstPgm"/>
+	    </classes>
+	  </test> 
+	  
+	  
+	  <!-- @AfterTest-->
+	  <test thread-count="5" name="Test1">
+	    <classes>
+	      <class name="TestNG.TestCase_Priority"/>
+	    </classes>
+	  </test> 
+  
+  
+</suite> 

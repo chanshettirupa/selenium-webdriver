@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- Execute 3 test case Parallely-->
+<!-- 1) parallel="false -:  Execute squential
+	 2) parallel="classes" -: Execute classes parallely many more explore options
+-->
+
+<suite name="Suite" parallel="true">  				<!-- Execute 3 test case Parallely so parellel= tests otherwise you can specify method as well-->
+  <test thread-count="5" name="ChromeTest">
+	  <parameter name="browser" value="Chrome" />  	<!-- chrome Driver: Pass name of driver as parameter to execute test in specific browser-->
+	    <classes>
+	      <class name="TestNG.SequentialExecution"/>
+	    </classes>
+  </test> 
+  
+  <test thread-count="5" name="FirefoxTest">
+	  <parameter name="browser" value="Firefox" />  	<!-- Firefox, Pass name of driver as parameter to execute test in specific browser-->
+	    <classes>
+	      <class name="TestNG.SequentialExecution"/>
+	    </classes>
+  </test> 
+  
+  <test thread-count="5" name="EdgeTest">
+	  <parameter name="browser" value="Edge" />  	<!-- Edge, Pass name of driver as parameter to execute test in specific browser-->
+	    <classes>
+	      <class name="TestNG.SequentialExecution"/>
+	    </classes>
+  </test> 
+</suite> 
